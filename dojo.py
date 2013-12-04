@@ -3,10 +3,24 @@ def umAcem():
 	lista = range(1, 101)
 	return lista
 
-def getElement(lista):
-	for a in lista:
-		if(a%3 == 0): 
-			return "Fizz"
-		elif(a%5 ==0):
-			return "Buzz"
+def fizz(number):
+	if(number%3 == 0): 
+		return "Fizz"
+	else:
+		return ""
 
+def buzz(number):
+	if(number%5 == 0): 
+		return "Buzz"
+	else:
+		return ""
+
+def fizz_buzz(number):
+	return fizz(number) + buzz(number)
+
+def main():
+    for number in umAcem():
+        print "%d: %s" % (number, fizz_buzz(number))
+
+if __name__ == "__main__":
+	main()
